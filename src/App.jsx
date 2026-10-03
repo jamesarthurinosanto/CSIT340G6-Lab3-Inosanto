@@ -1,19 +1,21 @@
 const App = () => {
-  const course = 'Information Technology'
-  const parts = [
-    {
-      name: 'Information Management 1',
-      units: 3
-    },
-    {
-      name: 'OObject-Oriented Programming',
-      units: 3
-    },
-    {
-      name: 'Application Development',
-      units: 3
-    }
-  ]
+  const course = {
+    name: 'Information Technology',
+    parts: [
+      {
+        name: 'Information Management 1',
+        units: 3
+      },
+      {
+        name: 'Object-Oriented Programming',
+        units: 3
+      },
+      {
+        name: 'Application Development',
+        units: 3
+      }
+    ]
+  }
 
   const fullName = 'James Arthur D. Inosanto'
   const courseCode = 'CSIT340'
@@ -21,9 +23,9 @@ const App = () => {
 
   return (
     <div>
-      <Header course={course} />
-      <Content parts={parts} />
-      <Total parts={parts} />
+      <Header course={course.name} />
+      <Content parts={course.parts} />
+      <Total parts={course.parts} />
       <Footer
         fullName={fullName}
         courseCode={courseCode}
